@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Royalty Stockpile Manager</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg" >
+        <a class="navbar-brand text-center" style="flex:auto;font-size: xxx-large;" href="#">
+          Royal Stockpile Manager
+        </a>
+    </nav>
+
+    <center style = "font-size: 15px;">
+        <b><span>Current Address: <span id = "current_address"></span></span></b>
+    </center>
+
+    <div class = "registerTalentPieceOwner_div">
+        <div style="margin-left: 15px;margin-top: 10px; class = "row">
+            <span> Create Talent Piece </span>
+        </div>
+        <div style="margin-left: 15px;margin-top: 10px; class = "row" id = "register_div">
+            <input class = "form-control" placeholder="Enter Name of Talent Piece" id = "talent_piece_name">
+            </br>
+            <input class = "form-control" placeholder="Enter Description" id = "talent_piece_description">
+            </br>
+            <input class = "form-control" placeholder="Enter Cost" id = "talent_piece_cost">
+            </br>
+            <input class = "form-control" placeholder="Enter Limit" id = "talent_piece_limit">
+            </br>
+            <button class="btn btn-info" type="button" id="create_talent_piece"> Create</button>
+        </div>
+    </div>
+
+    <div class = displayTalentPieceOwner_div style="margin-left: 15px;margin-top: 10px; class = "row">
+        <span>Talent Pieces currently available:</span>
+        <ul id="list_of_talents">
+        </ul>
+    </div>
+
+    <div class = "getData" style="margin-left: 15px;margin-top: 10px; class = "row">
+        <div>
+            <input class = "form-control" placeholder="Enter the index of the talent piece you want to display: " id = "get_talent_piece_index">
+            </br>
+            <button class="btn btn-info" type="button" id="get_talent_piece"> Get</button>
+        </div>
+        <div id = "data_index">
+        </div>
+    </div>
+
+    <div class = "getNumberOfTimesUsed" style="margin-left: 15px;margin-top: 10px; class = "row">
+        <div>
+            <input class = "form-control" placeholder="Enter the index of the talent piece you want to check the number of times it has been used: " id = "get_talent_piece_used_index">
+            </br>
+            <button class="btn btn-info" type="button" id="get_talent_piece_used"> Get</button>
+        </div>
+        <div id = "data_index_used">
+            
+        </div>
+    </div>
+
+    <div class = "useTalentPiece_div">
+        <div style="margin-left: 15px;margin-top: 10px; class = "row">
+            <input class = "form-control" placeholder="Enter the index of the talent piece you want to use: " id = "talent_piece_index">
+            </br>
+            <button class="btn btn-info" type="button" id="use_talent_piece"> Use</button>
+        </div>
+    </div>
+
+    <div class="container" id = "admin_div">
+      <div class="row" id="address_div">
+        <div style="margin-left: 15px;margin-top: 10px;">
+          <span> Address : </span>
+          <select id="enter_address" value=""></select>
+        </div>
+      </div>
+      <div style="margin-top: 10px;" id = "user_type_div">
+        <span> User Type : </span>
+        <select id="user_type" value=""></select>
+      </div>
+        </br>
+      <div class="row" id="register_div">
+        <div style="margin-left: 15px;">
+          <button class="btn btn-info" type="button" id="register">Register</button>
+          <button class="btn btn-info" type="button" id="unregister">Unregister</button>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/dist/bootstrap.min.js"></script>
+    <script src="js/dist/web3.min.js"></script>
+    <script src="js/dist/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
