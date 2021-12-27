@@ -1,5 +1,5 @@
 # BlockchainProject
-This project was done as part of my course "Blockchain Application development" from University at Buffalo
+This project was done as part of my course "Blockchain Application Development" from University at Buffalo
 
 Prerequisites for deploying:
 1. Ganache
